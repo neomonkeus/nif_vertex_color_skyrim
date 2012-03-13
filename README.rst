@@ -21,3 +21,11 @@ Usage
 * Install Blender 2.5+ in the default location
 * Install PyFFI 2.20+ 
 * Install the script folder to the add-ons directory
+* Enable the add-on in the User Preferences.
+* A new panel will be enabled in the Scene Tab.
+ 
+* 1: Load the desired Skyrim .nif file.
+* 2: The script will update the color wheel with the first encountered color
+* 3: Select a new color to replace all vertex color values
+* 4: An automated name is generated, basefile + "_copy.nif", which you can change.
+* 5: Save.
