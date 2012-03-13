@@ -1,6 +1,6 @@
 #--- ### Header
 bl_info = {
-           "name": "Niftools - Utilities",
+           "name": "Niftools - Vertex Utility",
            "description": "Utilities for nif related ",
            "author": "Neomonkeus",
            "version": (1, 0, 0),
@@ -18,23 +18,17 @@ bl_info = {
 
 import bpy
 import bpy.props
-from . import ui
-from . import operators
 
-class PathProperties(bpy.types.PropertyGroup):
-       
-    #---operator parameters
-    fileinput = bpy.props.StringProperty(name='Input', subtype='FILE_PATH', default="")   #, update=updatepath          
-    fileoutput = bpy.props.StringProperty(name='Output', subtype='FILE_PATH', default="")
-    hexwidget = bpy.props.FloatVectorProperty(name='Hex Value', subtype='COLOR', default=[0.0,0.0,0.0])
+from . import ui, operators, properties
 
 def register():
+    properties.register()
     bpy.utils.register_module(__name__)
-    bpy.types.Scene.vertexcolor = bpy.props.PointerProperty(type=PathProperties)
+
 
 def unregister():
+    properties.unregister()
     bpy.utils.unregister_module(__name__)
-    del bpy.types.Scene.vertexcolor
     
 if __name__ == "__main__":
     register()
