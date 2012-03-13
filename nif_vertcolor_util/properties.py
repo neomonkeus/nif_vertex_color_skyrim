@@ -29,7 +29,7 @@ class PathProperties(bpy.types.PropertyGroup):
     @classmethod
     def unregister(cls):
         del bpy.types.Scene.vertexcolor
-        
+
 def register():
     bpy.utils.register_class(PathProperties)
     

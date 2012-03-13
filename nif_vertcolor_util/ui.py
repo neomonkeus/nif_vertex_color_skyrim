@@ -23,10 +23,3 @@ class NiftoolsUtilityPanel(bpy.types.Panel):
         row.prop(context.scene.vertexcolor, "fileoutput")
         row = box.row()
         row.operator("vertexcolor.nifwrite", "Save")
-'''
-def register():
-    bpy.utils.register_class(NiftoolsUtilityPanel)
-    
-def unregister():
-    bpy.utils.unregister_class(NiftoolsUtilityPanel)
-'''
